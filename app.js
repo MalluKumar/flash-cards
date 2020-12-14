@@ -13,12 +13,6 @@ app.use(mainRoute);
 app.use('/cards', cardRoute);
 app.use('/static', express.static('static'));
 
-// app.use((req, res, next) => {
-//     const error = new Error("It's Error");
-//     error.status = 500;
-//     next(error);
-// });
-
 app.use((req, res, next) => {
     const error = new Error("Not Found");
     error.status = 404;
