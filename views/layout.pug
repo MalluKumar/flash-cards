@@ -1,0 +1,13 @@
+doctype html
+html(lang = "en")
+    head
+        title Flash Cards
+        // link(rel='stylesheet' href='/static/stylesheets/style.css')
+    body
+        include includes/header.pug
+        if name
+            h2 Welcome #{name}!!
+            form(action="/goodBye", method="post")
+                button(type="submit") GoodBye!!
+        block content
+        include includes/footer.pug
